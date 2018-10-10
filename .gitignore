@@ -1,0 +1,10 @@
+/Pods
+.ruby-version
+
+xcuserdata/
+
+*.xcuserstate
+
+pochi.app.dSYM.zip
+pochi.ipa
+./fastlane/report.xml

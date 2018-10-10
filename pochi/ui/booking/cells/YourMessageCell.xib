@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YourMessageCell" rowHeight="171" id="KGk-i7-Jjw" customClass="YourMessageCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_usericon" translatesAutoresizingMaskIntoConstraints="NO" id="abA-1y-CnF">
+                        <rect key="frame" x="16" y="9" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="8T5-9Z-pOk"/>
+                            <constraint firstAttribute="width" constant="40" id="gUF-11-yQY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-nB-g6N">
+                        <rect key="frame" x="64" y="9" width="240" height="133"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOx-oX-dNn">
+                                <rect key="frame" x="12" y="12" width="216" height="109"/>
+                                <string key="text">ありがとうございます！
+その日程、問題ないかと思います。愛犬について何点かお伺いしたいのですが、良いでしょうか。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QOx-oX-dNn" firstAttribute="top" secondItem="EZc-nB-g6N" secondAttribute="top" constant="12" id="1Bg-eA-fIc"/>
+                            <constraint firstAttribute="width" constant="240" id="4ny-9K-zA3"/>
+                            <constraint firstAttribute="trailing" secondItem="QOx-oX-dNn" secondAttribute="trailing" constant="12" id="CMu-ob-LZ4"/>
+                            <constraint firstAttribute="bottom" secondItem="QOx-oX-dNn" secondAttribute="bottom" constant="12" id="Ekc-el-DNE"/>
+                            <constraint firstItem="QOx-oX-dNn" firstAttribute="leading" secondItem="EZc-nB-g6N" secondAttribute="leading" constant="12" id="aTe-XQ-fMZ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017.11.12 11:21" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ttP-0i-GwX">
+                        <rect key="frame" x="76" y="149.5" width="74.5" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="iUx-O5-cjz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="abA-1y-CnF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="5aj-72-v5G"/>
+                    <constraint firstItem="abA-1y-CnF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="BiP-Dt-Lpf"/>
+                    <constraint firstItem="ttP-0i-GwX" firstAttribute="top" secondItem="EZc-nB-g6N" secondAttribute="bottom" constant="7" id="MdI-DN-e8G"/>
+                    <constraint firstItem="ttP-0i-GwX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="68" id="RtY-Lh-DTX"/>
+                    <constraint firstItem="EZc-nB-g6N" firstAttribute="leading" secondItem="abA-1y-CnF" secondAttribute="trailing" constant="8" id="biP-Mi-jU1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ttP-0i-GwX" secondAttribute="bottom" constant="1" id="hts-1r-JHV"/>
+                    <constraint firstItem="EZc-nB-g6N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="sYE-9d-xlD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="QOx-oX-dNn" id="Nme-Ob-TfA"/>
+                <outlet property="dateLabel" destination="ttP-0i-GwX" id="TSA-Mx-PwL"/>
+                <outlet property="iconView" destination="abA-1y-CnF" id="D1E-MS-e8q"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="64.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_default_usericon" width="150" height="150"/>
+    </resources>
+</document>

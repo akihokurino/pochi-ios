@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextViewWithoutLabelCell" id="KGk-i7-Jjw" customClass="TextViewWithoutLabelCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tTI-Fa-TeF">
+                        <rect key="frame" x="16" y="16" width="343" height="127"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDp-lL-iAG">
+                        <rect key="frame" x="0.0" y="158.5" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ekm-qD-Ix6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hDp-lL-iAG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5k9-2X-YRI"/>
+                    <constraint firstItem="tTI-Fa-TeF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="6Wg-rb-PND"/>
+                    <constraint firstAttribute="trailing" secondItem="tTI-Fa-TeF" secondAttribute="trailing" constant="16" id="IAC-AE-66O"/>
+                    <constraint firstAttribute="trailing" secondItem="hDp-lL-iAG" secondAttribute="trailing" id="J5O-In-KeO"/>
+                    <constraint firstAttribute="bottom" secondItem="tTI-Fa-TeF" secondAttribute="bottom" constant="16" id="Vn5-zE-OYz"/>
+                    <constraint firstAttribute="bottom" secondItem="hDp-lL-iAG" secondAttribute="bottom" id="XeJ-aE-v5e"/>
+                    <constraint firstItem="tTI-Fa-TeF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rvL-bs-wxq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="textView" destination="tTI-Fa-TeF" id="Y6G-t0-Ww7"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </tableViewCell>
+    </objects>
+</document>

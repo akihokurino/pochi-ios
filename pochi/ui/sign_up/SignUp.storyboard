@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up Navigation Controller-->
+        <scene sceneID="y93-mG-7bU">
+            <objects>
+                <navigationController storyboardIdentifier="SignUpNavigationController" id="OWb-vj-XWx" customClass="SignUpNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JVy-ZT-tw2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AXl-yc-72K" kind="relationship" relationship="rootViewController" id="TbO-VH-IJg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zWb-OW-oSb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="-1079"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="vx5-9r-xZq">
+            <objects>
+                <viewController id="AXl-yc-72K" userLabel="Sign Up View Controller" customClass="SignUpViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JjW-tK-N9Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="LRS-ya-qfN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SUY-jx-H2H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3i1-Vh-qvd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3i1-Vh-qvd" firstAttribute="top" secondItem="SUY-jx-H2H" secondAttribute="top" id="1iK-Oz-OXw"/>
+                            <constraint firstItem="3i1-Vh-qvd" firstAttribute="leading" secondItem="SUY-jx-H2H" secondAttribute="leading" id="CWM-fd-JXF"/>
+                            <constraint firstAttribute="trailing" secondItem="3i1-Vh-qvd" secondAttribute="trailing" id="OCf-ou-m8R"/>
+                            <constraint firstItem="LRS-ya-qfN" firstAttribute="top" secondItem="3i1-Vh-qvd" secondAttribute="bottom" id="iFU-OI-oCD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="プロフィールを登録" id="4Gh-2q-jVf">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="QJp-0N-E7H">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBtn" destination="QJp-0N-E7H" id="7hh-Z8-uI6"/>
+                        <outlet property="tableView" destination="3i1-Vh-qvd" id="Qsn-jM-XX2"/>
+                        <segue destination="hk9-Tz-Zog" kind="show" identifier="fromSignUpToCreateDog" id="WjR-Hu-BpO">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T6G-2d-ZQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="576.79999999999995" y="-1079.0104947526238"/>
+        </scene>
+        <!--愛犬を登録-->
+        <scene sceneID="88E-4k-gKa">
+            <objects>
+                <viewController storyboardIdentifier="CreateDogViewController" id="hk9-Tz-Zog" customClass="CreateDogViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bU7-VM-k8y"/>
+                        <viewControllerLayoutGuide type="bottom" id="7fn-Ar-mdd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aCb-06-x46">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vSf-sv-K2N">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7fn-Ar-mdd" firstAttribute="top" secondItem="vSf-sv-K2N" secondAttribute="bottom" id="3ec-xN-xg3"/>
+                            <constraint firstAttribute="trailing" secondItem="vSf-sv-K2N" secondAttribute="trailing" id="Mos-dD-Yp5"/>
+                            <constraint firstItem="vSf-sv-K2N" firstAttribute="top" secondItem="aCb-06-x46" secondAttribute="top" id="X5Q-Qf-IpZ"/>
+                            <constraint firstItem="vSf-sv-K2N" firstAttribute="leading" secondItem="aCb-06-x46" secondAttribute="leading" id="lSe-gA-IxR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="愛犬を登録" id="l8G-Nj-hn7">
+                        <barButtonItem key="rightBarButtonItem" title="スキップ" id="APM-Ak-QuQ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="skipBtn" destination="APM-Ak-QuQ" id="eXH-Pj-vKx"/>
+                        <outlet property="tableView" destination="vSf-sv-K2N" id="oka-ui-e07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xlM-ip-fNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476" y="-1079.0104947526238"/>
+        </scene>
+    </scenes>
+</document>

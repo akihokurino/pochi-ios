@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="CYw-uQ-Qc4">
+            <objects>
+                <viewController storyboardIdentifier="Setting" id="i4x-uO-lSe" userLabel="Setting View Controller" customClass="SettingViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hWZ-Mq-c1I"/>
+                        <viewControllerLayoutGuide type="bottom" id="zDg-qA-QKh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uGd-9f-Qho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xtB-6A-Jof">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xtB-6A-Jof" firstAttribute="leading" secondItem="uGd-9f-Qho" secondAttribute="leading" id="ZYz-No-DEF"/>
+                            <constraint firstItem="xtB-6A-Jof" firstAttribute="top" secondItem="uGd-9f-Qho" secondAttribute="top" id="aCR-OP-0la"/>
+                            <constraint firstAttribute="trailing" secondItem="xtB-6A-Jof" secondAttribute="trailing" id="lNp-Sr-oS5"/>
+                            <constraint firstItem="zDg-qA-QKh" firstAttribute="top" secondItem="xtB-6A-Jof" secondAttribute="bottom" id="xXc-rw-noj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="設定" id="H7g-Xw-wD1"/>
+                    <connections>
+                        <outlet property="tableView" destination="xtB-6A-Jof" id="7TU-Q0-17e"/>
+                        <segue destination="47N-sJ-zbX" kind="show" identifier="fromSettingToEditEmail" id="ZFm-eN-fes">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="dl5-hL-HCv" kind="show" identifier="fromSettingToEditPassword" id="1xE-MM-Dvo">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="YX0-ax-P6o" kind="show" identifier="fromSettingToSettingPushNotification" id="oxJ-fO-LZS">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="2IX-dG-RZ6" kind="show" identifier="fromSettingToLicenseList" id="0f5-g1-HFl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggx-Oi-41s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="6026"/>
+        </scene>
+        <!--その他-->
+        <scene sceneID="4CG-YD-H2u">
+            <objects>
+                <navigationController storyboardIdentifier="SettingNavigationController" id="SIs-cC-vuc" customClass="SettingNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="その他" image="ic_tab_others" selectedImage="ic_tab_others_active" id="dlm-g6-RPB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BLY-Zp-ifv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DKT-tF-RxK" kind="relationship" relationship="rootViewController" id="16s-kW-v5Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arp-Oo-5gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1527" y="4211"/>
+        </scene>
+        <!--お泊まりが終了した予約-->
+        <scene sceneID="LFL-3I-aEU">
+            <objects>
+                <viewController id="e2g-e6-BmG" customClass="ClosedLeaveBookingListViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5no-qM-oVz"/>
+                        <viewControllerLayoutGuide type="bottom" id="4mH-bb-Fd2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WEU-3K-ScH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tN4-Yv-QD3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tN4-Yv-QD3" firstAttribute="top" secondItem="WEU-3K-ScH" secondAttribute="top" id="8LB-lv-kZk"/>
+                            <constraint firstAttribute="trailing" secondItem="tN4-Yv-QD3" secondAttribute="trailing" id="Qkr-Zv-Knh"/>
+                            <constraint firstItem="tN4-Yv-QD3" firstAttribute="leading" secondItem="WEU-3K-ScH" secondAttribute="leading" id="WpA-NE-c5m"/>
+                            <constraint firstItem="4mH-bb-Fd2" firstAttribute="top" secondItem="tN4-Yv-QD3" secondAttribute="bottom" id="uYK-bM-ao4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="お泊まりが終了した予約" id="aNn-0H-Rj0"/>
+                    <connections>
+                        <outlet property="tableView" destination="tN4-Yv-QD3" id="0P2-xH-UtN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RmJ-aW-eSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="5069"/>
+        </scene>
+        <!--受け入れが終了した予約-->
+        <scene sceneID="nD5-Eq-Mqu">
+            <objects>
+                <viewController id="Gf4-rQ-0st" customClass="ClosedKeepBookingListViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SRz-zj-Kh0"/>
+                        <viewControllerLayoutGuide type="bottom" id="8R2-dr-BRy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WC5-fh-O2g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AsM-uK-OGw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8R2-dr-BRy" firstAttribute="top" secondItem="AsM-uK-OGw" secondAttribute="bottom" id="TlO-D1-fng"/>
+                            <constraint firstItem="AsM-uK-OGw" firstAttribute="leading" secondItem="WC5-fh-O2g" secondAttribute="leading" id="Xxf-gc-wbr"/>
+                            <constraint firstItem="AsM-uK-OGw" firstAttribute="top" secondItem="WC5-fh-O2g" secondAttribute="top" id="r1d-gK-eSK"/>
+                            <constraint firstAttribute="trailing" secondItem="AsM-uK-OGw" secondAttribute="trailing" id="zPT-Jf-Gue"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="受け入れが終了した予約" id="Jbn-2T-yrS"/>
+                    <connections>
+                        <outlet property="tableView" destination="AsM-uK-OGw" id="APp-20-gMB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqL-Eq-3na" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="5070"/>
+        </scene>
+        <!--現金振込申請-->
+        <scene sceneID="vZ2-Tv-TkY">
+            <objects>
+                <viewController id="t2X-Jn-E64" customClass="ReturnPointViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fj4-CX-cuP"/>
+                        <viewControllerLayoutGuide type="bottom" id="WMs-BP-4MD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bBb-rW-9ZJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8n0-cf-Zoe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WMs-BP-4MD" firstAttribute="top" secondItem="8n0-cf-Zoe" secondAttribute="bottom" id="PmH-8t-Hjp"/>
+                            <constraint firstItem="8n0-cf-Zoe" firstAttribute="top" secondItem="bBb-rW-9ZJ" secondAttribute="top" id="S5d-he-EJX"/>
+                            <constraint firstAttribute="trailing" secondItem="8n0-cf-Zoe" secondAttribute="trailing" id="d1K-dU-VNg"/>
+                            <constraint firstItem="8n0-cf-Zoe" firstAttribute="leading" secondItem="bBb-rW-9ZJ" secondAttribute="leading" id="zfh-XA-g7p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="現金振込申請" id="CbT-qk-eNH"/>
+                    <connections>
+                        <outlet property="tableView" destination="8n0-cf-Zoe" id="fkP-7K-bdf"/>
+                        <segue destination="EGn-x6-A3I" kind="show" identifier="fromReturnPointToSelectBankAccount" id="QMh-Gy-8wg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNl-ME-mUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="4212"/>
+        </scene>
+        <!--選択してください-->
+        <scene sceneID="bqy-EO-lW3">
+            <objects>
+                <viewController storyboardIdentifier="SelectBankAccountViewController" id="EGn-x6-A3I" customClass="SelectBankAccountViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eTF-9J-UYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="6g4-bs-39S"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="HBZ-87-W82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bNJ-IN-fUa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bNJ-IN-fUa" secondAttribute="trailing" id="GvX-JR-JdB"/>
+                            <constraint firstItem="6g4-bs-39S" firstAttribute="top" secondItem="bNJ-IN-fUa" secondAttribute="bottom" id="Lhl-BZ-f1I"/>
+                            <constraint firstItem="bNJ-IN-fUa" firstAttribute="leading" secondItem="HBZ-87-W82" secondAttribute="leading" id="V6K-oH-JiN"/>
+                            <constraint firstItem="bNJ-IN-fUa" firstAttribute="top" secondItem="HBZ-87-W82" secondAttribute="top" id="eWZ-x2-ZeW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選択してください" id="3xK-nb-GIk"/>
+                    <connections>
+                        <outlet property="tableView" destination="bNJ-IN-fUa" id="3p2-r8-dJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dex-EV-1ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="4209.4452773613193"/>
+        </scene>
+        <!--運営からのお知らせ-->
+        <scene sceneID="ByU-Nc-cBH">
+            <objects>
+                <viewController storyboardIdentifier="NoticeListViewController" id="cQd-ph-9S8" customClass="NoticeListViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ng3-d4-6EJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="RDZ-eO-NgD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QCN-M1-wCo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DiU-KN-IBc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DiU-KN-IBc" firstAttribute="leading" secondItem="QCN-M1-wCo" secondAttribute="leading" id="ITz-ch-0t9"/>
+                            <constraint firstItem="RDZ-eO-NgD" firstAttribute="top" secondItem="DiU-KN-IBc" secondAttribute="bottom" id="YBQ-av-gAa"/>
+                            <constraint firstItem="DiU-KN-IBc" firstAttribute="top" secondItem="QCN-M1-wCo" secondAttribute="top" id="rn4-wq-leT"/>
+                            <constraint firstAttribute="trailing" secondItem="DiU-KN-IBc" secondAttribute="trailing" id="vzK-mU-5Yi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="運営からのお知らせ" id="ym4-iQ-1qE"/>
+                    <connections>
+                        <outlet property="tableView" destination="DiU-KN-IBc" id="v74-Lg-YcR"/>
+                        <segue destination="h3h-ts-gmp" kind="show" identifier="fromNoticeListToDetail" id="7e4-bK-mqm">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zIM-a8-cTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="2717"/>
+        </scene>
+        <!--振込申請-->
+        <scene sceneID="dje-pG-AHa">
+            <objects>
+                <viewController storyboardIdentifier="SettingBankAccountViewController" id="pLr-zx-NDI" customClass="SettingBankAccountViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fh0-1Q-SeY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ovr-5j-Ajk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="21v-h7-nZo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C0F-vI-TGw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C0F-vI-TGw" secondAttribute="trailing" id="C3G-tb-hbW"/>
+                            <constraint firstItem="ovr-5j-Ajk" firstAttribute="top" secondItem="C0F-vI-TGw" secondAttribute="bottom" id="WD3-Fx-PiV"/>
+                            <constraint firstItem="C0F-vI-TGw" firstAttribute="top" secondItem="21v-h7-nZo" secondAttribute="top" id="grf-Hm-Qbq"/>
+                            <constraint firstItem="C0F-vI-TGw" firstAttribute="leading" secondItem="21v-h7-nZo" secondAttribute="leading" id="tZ5-dT-KxN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="振込申請" id="S3K-f0-GV3"/>
+                    <connections>
+                        <outlet property="tableView" destination="C0F-vI-TGw" id="52e-dy-plR"/>
+                        <segue destination="Y4b-rf-lfa" kind="show" identifier="fromSettingBankAccountToSelectBank" id="gYK-hJ-x4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ATs-dS-8Bo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="3449.3253373313346"/>
+        </scene>
+        <!--口座情報を入力-->
+        <scene sceneID="oAs-SE-DL6">
+            <objects>
+                <viewController id="7CO-7U-i1E" customClass="RegisterBankAccountViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H1f-0Q-zQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="7QR-3T-zey"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="tat-rc-exm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0fg-rX-NZN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0fg-rX-NZN" firstAttribute="top" secondItem="tat-rc-exm" secondAttribute="top" id="9cS-xe-DnC"/>
+                            <constraint firstAttribute="trailing" secondItem="0fg-rX-NZN" secondAttribute="trailing" id="FyR-YO-aIs"/>
+                            <constraint firstItem="0fg-rX-NZN" firstAttribute="leading" secondItem="tat-rc-exm" secondAttribute="leading" id="QBL-YV-6FO"/>
+                            <constraint firstItem="7QR-3T-zey" firstAttribute="top" secondItem="0fg-rX-NZN" secondAttribute="bottom" id="Uv2-Vu-ncL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="口座情報を入力" id="l4Z-X7-tSU"/>
+                    <connections>
+                        <outlet property="tableView" destination="0fg-rX-NZN" id="KN3-cG-phu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZt-dm-SZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2748" y="3448"/>
+        </scene>
+        <!--Other View Controller-->
+        <scene sceneID="YbD-oX-OKr">
+            <objects>
+                <viewController storyboardIdentifier="OtherViewController" id="DKT-tF-RxK" userLabel="Other View Controller" customClass="OtherViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7z5-zd-XIs"/>
+                        <viewControllerLayoutGuide type="bottom" id="GAi-nF-6J3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zDq-eN-ZNy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgw-LD-x7q">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kgw-LD-x7q" firstAttribute="top" secondItem="zDq-eN-ZNy" secondAttribute="top" id="BDJ-qx-nc7"/>
+                            <constraint firstItem="GAi-nF-6J3" firstAttribute="top" secondItem="kgw-LD-x7q" secondAttribute="bottom" id="UXT-af-A1h"/>
+                            <constraint firstItem="kgw-LD-x7q" firstAttribute="leading" secondItem="zDq-eN-ZNy" secondAttribute="leading" id="hkk-xI-R6d"/>
+                            <constraint firstAttribute="trailing" secondItem="kgw-LD-x7q" secondAttribute="trailing" id="qpM-1a-PzG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="その他" id="cwR-sM-pOd"/>
+                    <connections>
+                        <outlet property="tableView" destination="kgw-LD-x7q" id="JAU-fk-jVg"/>
+                        <segue destination="i4x-uO-lSe" kind="show" identifier="fromOtherToSetting" id="98c-dN-1gb">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="cQd-ph-9S8" kind="show" identifier="fromOtherToNoticeList" id="n2z-TU-cvh">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="t2X-Jn-E64" kind="show" identifier="fromOtherToReturnPoint" id="xtz-SW-bbJ">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="e2g-e6-BmG" kind="show" identifier="fromOtherToClosedLeaveBookingList" id="DUD-TY-K9H">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="Gf4-rQ-0st" kind="show" identifier="fromOtherToClosedKeepBookingList" id="xtg-L0-BMa">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="pLr-zx-NDI" kind="show" identifier="fromOtherToSettingBankAccount" id="3vP-U4-Ydr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWi-u9-6cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="4213"/>
+        </scene>
+        <!--Notice Detail View Controller-->
+        <scene sceneID="oxE-RU-dfN">
+            <objects>
+                <viewController storyboardIdentifier="NoticeDetailViewController" id="h3h-ts-gmp" customClass="NoticeDetailViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YHS-ir-l7q"/>
+                        <viewControllerLayoutGuide type="bottom" id="HIb-2R-VnT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O1j-EH-pCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6AD-ud-oCV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6AD-ud-oCV" firstAttribute="top" secondItem="O1j-EH-pCJ" secondAttribute="top" id="Kci-tT-vd9"/>
+                            <constraint firstItem="6AD-ud-oCV" firstAttribute="leading" secondItem="O1j-EH-pCJ" secondAttribute="leading" id="Whf-NB-mrd"/>
+                            <constraint firstAttribute="trailing" secondItem="6AD-ud-oCV" secondAttribute="trailing" id="qyg-SN-XTz"/>
+                            <constraint firstItem="HIb-2R-VnT" firstAttribute="top" secondItem="6AD-ud-oCV" secondAttribute="bottom" id="wQI-b6-g4A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6AD-ud-oCV" id="nW6-bg-kOW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecX-Ef-EE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="2716"/>
+        </scene>
+        <!--メールアドレス変更-->
+        <scene sceneID="ntZ-LF-IRs">
+            <objects>
+                <viewController id="47N-sJ-zbX" customClass="EditEmailViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZj-Xk-5Nb"/>
+                        <viewControllerLayoutGuide type="bottom" id="VEq-Ft-4a0"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="rVg-FF-02Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c4q-w8-WUZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c4q-w8-WUZ" firstAttribute="top" secondItem="rVg-FF-02Z" secondAttribute="top" id="4LZ-f0-Xbu"/>
+                            <constraint firstAttribute="trailing" secondItem="c4q-w8-WUZ" secondAttribute="trailing" id="BM1-YS-MP4"/>
+                            <constraint firstItem="VEq-Ft-4a0" firstAttribute="top" secondItem="c4q-w8-WUZ" secondAttribute="bottom" id="Ych-Uu-t7T"/>
+                            <constraint firstItem="c4q-w8-WUZ" firstAttribute="leading" secondItem="rVg-FF-02Z" secondAttribute="leading" id="pl1-sO-K1U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="メールアドレス変更" id="e0g-Qz-C79"/>
+                    <connections>
+                        <outlet property="tableView" destination="c4q-w8-WUZ" id="MNh-mQ-6db"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLi-S4-6Ac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="7567"/>
+        </scene>
+        <!--ライセンス一覧-->
+        <scene sceneID="zlx-fp-Qee">
+            <objects>
+                <viewController storyboardIdentifier="LicenseListViewController" id="2IX-dG-RZ6" customClass="LicenseListViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R9e-O5-BZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="euB-sC-bgI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZBz-U3-1mk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-AV-0kz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="euB-sC-bgI" firstAttribute="top" secondItem="PDc-AV-0kz" secondAttribute="bottom" id="4Dz-nI-s5M"/>
+                            <constraint firstItem="PDc-AV-0kz" firstAttribute="top" secondItem="ZBz-U3-1mk" secondAttribute="top" id="Kfu-el-r2c"/>
+                            <constraint firstItem="PDc-AV-0kz" firstAttribute="leading" secondItem="ZBz-U3-1mk" secondAttribute="leading" id="epf-XF-v5f"/>
+                            <constraint firstAttribute="trailing" secondItem="PDc-AV-0kz" secondAttribute="trailing" id="oKJ-mM-xLg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ライセンス一覧" id="ogd-8f-uQr"/>
+                    <connections>
+                        <outlet property="tableView" destination="PDc-AV-0kz" id="OhK-TE-bSt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aV-dz-Nzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="8292.5037481259369"/>
+        </scene>
+        <!--銀行を選択-->
+        <scene sceneID="eZA-Si-2hh">
+            <objects>
+                <viewController id="Y4b-rf-lfa" customClass="SelectBankViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fKL-Ti-SmQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XJ4-x1-bfu"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="24Q-SM-00i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k14-Kq-smb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XJ4-x1-bfu" firstAttribute="top" secondItem="k14-Kq-smb" secondAttribute="bottom" id="Ts5-N3-576"/>
+                            <constraint firstItem="k14-Kq-smb" firstAttribute="top" secondItem="24Q-SM-00i" secondAttribute="top" id="WLx-ve-fYd"/>
+                            <constraint firstAttribute="trailing" secondItem="k14-Kq-smb" secondAttribute="trailing" id="Yp3-cO-06S"/>
+                            <constraint firstItem="k14-Kq-smb" firstAttribute="leading" secondItem="24Q-SM-00i" secondAttribute="leading" id="pEc-0P-25n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="銀行を選択" id="4Co-t3-qiT"/>
+                    <connections>
+                        <outlet property="tableView" destination="k14-Kq-smb" id="2zI-Ag-dn5"/>
+                        <segue destination="7CO-7U-i1E" kind="show" identifier="fromSelectBankToRegisterBankAccount" id="q8z-qH-vZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bur-yg-iUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="3449"/>
+        </scene>
+        <!--パスワード変更-->
+        <scene sceneID="7aj-r1-lA7">
+            <objects>
+                <viewController id="dl5-hL-HCv" customClass="EditPasswordViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bGj-sL-wla"/>
+                        <viewControllerLayoutGuide type="bottom" id="PDg-Gc-MNN"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="3FP-qP-jUI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mva-gd-hFN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mva-gd-hFN" firstAttribute="leading" secondItem="3FP-qP-jUI" secondAttribute="leading" id="Add-RM-SbG"/>
+                            <constraint firstItem="mva-gd-hFN" firstAttribute="top" secondItem="3FP-qP-jUI" secondAttribute="top" id="BS1-OJ-1rM"/>
+                            <constraint firstAttribute="trailing" secondItem="mva-gd-hFN" secondAttribute="trailing" id="CsN-U7-aKh"/>
+                            <constraint firstItem="PDg-Gc-MNN" firstAttribute="top" secondItem="mva-gd-hFN" secondAttribute="bottom" id="DZG-y0-V4p"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="パスワード変更" id="jXG-T7-fKh"/>
+                    <connections>
+                        <outlet property="tableView" destination="mva-gd-hFN" id="CAh-mv-Qny"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5P-l8-206" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="6821"/>
+        </scene>
+        <!--プッシュ通知設定-->
+        <scene sceneID="qXJ-ZN-hAk">
+            <objects>
+                <viewController storyboardIdentifier="SettingPushNotificationViewController" id="YX0-ax-P6o" customClass="SettingPushNotificationViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6oE-xz-RTo"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvR-Wp-6QS"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Xap-tO-7Ay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J1E-UZ-Cvw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J1E-UZ-Cvw" secondAttribute="trailing" id="Bgp-pc-baW"/>
+                            <constraint firstItem="J1E-UZ-Cvw" firstAttribute="leading" secondItem="Xap-tO-7Ay" secondAttribute="leading" id="WhS-dG-sTc"/>
+                            <constraint firstItem="fvR-Wp-6QS" firstAttribute="top" secondItem="J1E-UZ-Cvw" secondAttribute="bottom" id="z5k-FF-Cp8"/>
+                            <constraint firstItem="J1E-UZ-Cvw" firstAttribute="top" secondItem="Xap-tO-7Ay" secondAttribute="top" id="zjI-pY-7tl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="プッシュ通知設定" id="i1d-hc-q2Q"/>
+                    <connections>
+                        <outlet property="tableView" destination="J1E-UZ-Cvw" id="b5I-cm-Jz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vcl-cU-dlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="6026"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_tab_others" width="30" height="30"/>
+        <image name="ic_tab_others_active" width="30" height="30"/>
+    </resources>
+</document>

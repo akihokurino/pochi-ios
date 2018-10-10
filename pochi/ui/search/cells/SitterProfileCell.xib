@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SitterProfileCell" rowHeight="254" id="KGk-i7-Jjw" customClass="SitterProfileCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_usericon" translatesAutoresizingMaskIntoConstraints="NO" id="XZ9-BW-Wfl">
+                        <rect key="frame" x="16" y="16" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="1Jd-Ha-0dO"/>
+                            <constraint firstAttribute="height" constant="60" id="X6R-1z-ddZ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nakagawa Takashi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQR-Wl-CMT">
+                        <rect key="frame" x="84" y="26" width="275" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="BCi-pM-dda"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="たかし" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-z6-Pqt">
+                        <rect key="frame" x="84" y="49" width="275" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="LHd-PX-tRI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMz-e3-GFC">
+                        <rect key="frame" x="16" y="92" width="343" height="140"/>
+                        <string key="text">僕のページをみてくれてありがとう！いまは、一軒家に自
+分の犬と一緒に暮らしています。
+犬を飼い始めてからはもう3年経ちます。いろいろなワンち
+ゃんを預かってきました。安心してください♪
+なにか気になる点などあれば、いつでもメッセージくださ
+い。受け入れの時間などもできる限り調整します！</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yv-cR-v8W">
+                        <rect key="frame" x="16" y="248.5" width="343" height="1"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="5zS-86-cdh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4yv-cR-v8W" firstAttribute="top" secondItem="cMz-e3-GFC" secondAttribute="bottom" constant="16.5" id="8PH-wb-3VN"/>
+                    <constraint firstItem="rcJ-z6-Pqt" firstAttribute="top" secondItem="vQR-Wl-CMT" secondAttribute="bottom" constant="5" id="8kx-Wm-xEM"/>
+                    <constraint firstItem="cMz-e3-GFC" firstAttribute="top" secondItem="rcJ-z6-Pqt" secondAttribute="bottom" constant="27" id="9pU-EW-7s6"/>
+                    <constraint firstItem="vQR-Wl-CMT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="AP6-ox-xlK"/>
+                    <constraint firstAttribute="bottom" secondItem="4yv-cR-v8W" secondAttribute="bottom" id="Eyq-KQ-7sV"/>
+                    <constraint firstItem="rcJ-z6-Pqt" firstAttribute="leading" secondItem="XZ9-BW-Wfl" secondAttribute="trailing" constant="8" id="FSZ-iW-b01"/>
+                    <constraint firstItem="vQR-Wl-CMT" firstAttribute="leading" secondItem="XZ9-BW-Wfl" secondAttribute="trailing" constant="8" id="Fgc-fO-V6w"/>
+                    <constraint firstItem="4yv-cR-v8W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="PT4-AX-h3h"/>
+                    <constraint firstItem="XZ9-BW-Wfl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="S4P-PC-2ge"/>
+                    <constraint firstAttribute="trailing" secondItem="4yv-cR-v8W" secondAttribute="trailing" constant="16" id="Ss8-Jd-tsc"/>
+                    <constraint firstItem="cMz-e3-GFC" firstAttribute="top" secondItem="XZ9-BW-Wfl" secondAttribute="bottom" constant="16" id="VVF-9f-FiG"/>
+                    <constraint firstItem="XZ9-BW-Wfl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="Ve6-rn-dKQ"/>
+                    <constraint firstItem="vQR-Wl-CMT" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="a1Y-Bn-onV"/>
+                    <constraint firstItem="rcJ-z6-Pqt" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="ot4-Jc-dEf"/>
+                    <constraint firstItem="cMz-e3-GFC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="uhE-mw-90h"/>
+                    <constraint firstItem="cMz-e3-GFC" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-8" id="wuH-pf-UC8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomBorderView" destination="4yv-cR-v8W" id="ups-Ux-ggS"/>
+                <outlet property="messageLabel" destination="cMz-e3-GFC" id="vTT-HX-BRh"/>
+                <outlet property="nickNameLabel" destination="rcJ-z6-Pqt" id="Iz5-RF-AKd"/>
+                <outlet property="userIconView" destination="XZ9-BW-Wfl" id="lMT-nk-1ZC"/>
+                <outlet property="userNameLabel" destination="vQR-Wl-CMT" id="rv0-xa-wbr"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="131"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_default_usericon" width="150" height="150"/>
+    </resources>
+</document>

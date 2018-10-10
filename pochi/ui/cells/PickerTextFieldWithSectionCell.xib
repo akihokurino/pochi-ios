@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TextFieldWithoutLabelCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickerTextFieldWithSectionCell" id="6qx-gK-Law" customClass="PickerTextFieldWithSectionCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6qx-gK-Law" id="dFr-12-tWz">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTR-Xf-AWP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="セクションタイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptf-7L-Wge">
+                                <rect key="frame" x="16" y="16.5" width="343" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="6uu-ym-h40"/>
+                            <constraint firstItem="Ptf-7L-Wge" firstAttribute="centerY" secondItem="VTR-Xf-AWP" secondAttribute="centerY" id="BPD-7m-Sz6"/>
+                            <constraint firstItem="Ptf-7L-Wge" firstAttribute="leading" secondItem="VTR-Xf-AWP" secondAttribute="leading" constant="16" id="Spv-Yc-bpc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ptf-7L-Wge" secondAttribute="trailing" constant="16" id="h4y-bG-faz"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGH-Bw-KZE">
+                        <rect key="frame" x="0.0" y="48" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="WEf-W1-rYW"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="選択してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9W0-7c-hsf" customClass="PickerTextField" customModule="pochi" customModuleProvider="target">
+                        <rect key="frame" x="16" y="48" width="343" height="47"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-gH-JjI">
+                        <rect key="frame" x="0.0" y="94.5" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="sNf-XY-Whx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9W0-7c-hsf" firstAttribute="leading" secondItem="dFr-12-tWz" secondAttribute="leading" constant="16" id="0u0-JW-N7m"/>
+                    <constraint firstItem="xGH-Bw-KZE" firstAttribute="top" secondItem="VTR-Xf-AWP" secondAttribute="bottom" id="Azp-Js-FbM"/>
+                    <constraint firstAttribute="trailing" secondItem="bpa-gH-JjI" secondAttribute="trailing" id="FPZ-fu-r30"/>
+                    <constraint firstAttribute="trailing" secondItem="9W0-7c-hsf" secondAttribute="trailing" constant="16" id="J6H-53-o7q"/>
+                    <constraint firstItem="9W0-7c-hsf" firstAttribute="top" secondItem="VTR-Xf-AWP" secondAttribute="bottom" id="PxG-aU-BhN"/>
+                    <constraint firstItem="VTR-Xf-AWP" firstAttribute="leading" secondItem="dFr-12-tWz" secondAttribute="leading" id="Xzz-bl-Lgy"/>
+                    <constraint firstAttribute="trailing" secondItem="xGH-Bw-KZE" secondAttribute="trailing" id="YGo-i9-stT"/>
+                    <constraint firstAttribute="bottom" secondItem="bpa-gH-JjI" secondAttribute="bottom" id="dRg-KN-g04"/>
+                    <constraint firstItem="xGH-Bw-KZE" firstAttribute="leading" secondItem="dFr-12-tWz" secondAttribute="leading" id="loc-00-7wB"/>
+                    <constraint firstAttribute="trailing" secondItem="VTR-Xf-AWP" secondAttribute="trailing" id="nFg-fR-iDx"/>
+                    <constraint firstItem="bpa-gH-JjI" firstAttribute="leading" secondItem="dFr-12-tWz" secondAttribute="leading" id="s0T-RJ-Xvz"/>
+                    <constraint firstItem="VTR-Xf-AWP" firstAttribute="top" secondItem="dFr-12-tWz" secondAttribute="top" id="usP-OL-ZnX"/>
+                    <constraint firstAttribute="bottom" secondItem="9W0-7c-hsf" secondAttribute="bottom" id="uyP-kA-amu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="pickerTextField" destination="9W0-7c-hsf" id="1x7-Yw-oos"/>
+                <outlet property="sectionTitle" destination="Ptf-7L-Wge" id="lff-qz-XJg"/>
+            </connections>
+            <point key="canvasLocation" x="27.5" y="-17"/>
+        </tableViewCell>
+    </objects>
+</document>

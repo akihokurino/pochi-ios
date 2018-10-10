@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextFieldCell" rowHeight="90" id="KGk-i7-Jjw" customClass="TextFieldCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-AF-GRK">
+                        <rect key="frame" x="24" y="12" width="40" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-E4-Oyw" customClass="UnderLineTextField" customModule="pochi" customModuleProvider="target">
+                        <rect key="frame" x="24" y="28" width="327" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="idy-cR-g3b"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUA-z4-iVK">
+                        <rect key="frame" x="351" y="12" width="0.0" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XBg-E4-Oyw" firstAttribute="top" secondItem="MUA-z4-iVK" secondAttribute="bottom" id="8Ce-e8-qn5"/>
+                    <constraint firstItem="MUA-z4-iVK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="9KT-HB-uCY"/>
+                    <constraint firstItem="XBg-E4-Oyw" firstAttribute="top" secondItem="IWa-AF-GRK" secondAttribute="bottom" id="FBD-Ig-90o"/>
+                    <constraint firstAttribute="trailing" secondItem="XBg-E4-Oyw" secondAttribute="trailing" constant="24" id="hoh-EU-Y2l"/>
+                    <constraint firstItem="XBg-E4-Oyw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="mRw-yz-1ny"/>
+                    <constraint firstItem="IWa-AF-GRK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="tBW-WK-ZZJ"/>
+                    <constraint firstAttribute="trailing" secondItem="MUA-z4-iVK" secondAttribute="trailing" constant="24" id="wlN-RO-vmx"/>
+                    <constraint firstItem="IWa-AF-GRK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="x4U-Ro-64u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="label" destination="IWa-AF-GRK" id="U3z-SJ-FRO"/>
+                <outlet property="rightLabel" destination="MUA-z4-iVK" id="rfF-NI-EcV"/>
+                <outlet property="textField" destination="XBg-E4-Oyw" id="cqY-T4-xn3"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="77"/>
+        </tableViewCell>
+    </objects>
+</document>

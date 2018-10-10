@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sitter Profile View Controller-->
+        <scene sceneID="NrF-vt-b4s">
+            <objects>
+                <viewController storyboardIdentifier="SitterProfileViewController" id="RzG-fE-vDf" customClass="SitterProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mna-9B-gyf"/>
+                        <viewControllerLayoutGuide type="bottom" id="xbV-YZ-R75"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CGt-IC-8RE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-bC-dD3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHq-Vc-hDp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="lwv-ih-JaA"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="プロフィール" id="LYc-QI-qkY">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AbR-4d-1WK">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aCd-bC-dD3" secondAttribute="trailing" id="025-NV-2R0"/>
+                            <constraint firstItem="aCd-bC-dD3" firstAttribute="leading" secondItem="CGt-IC-8RE" secondAttribute="leading" id="3Re-fa-tG9"/>
+                            <constraint firstItem="bHq-Vc-hDp" firstAttribute="leading" secondItem="CGt-IC-8RE" secondAttribute="leading" id="904-7z-VUQ"/>
+                            <constraint firstAttribute="trailing" secondItem="bHq-Vc-hDp" secondAttribute="trailing" id="BAI-6g-oqG"/>
+                            <constraint firstItem="bHq-Vc-hDp" firstAttribute="top" secondItem="CGt-IC-8RE" secondAttribute="top" id="EFY-lV-DUk"/>
+                            <constraint firstItem="xbV-YZ-R75" firstAttribute="top" secondItem="aCd-bC-dD3" secondAttribute="bottom" id="Nwg-Fa-prb"/>
+                            <constraint firstItem="aCd-bC-dD3" firstAttribute="top" secondItem="bHq-Vc-hDp" secondAttribute="bottom" id="PxC-hj-NVN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeBtn" destination="AbR-4d-1WK" id="oau-Gb-Bum"/>
+                        <outlet property="tableView" destination="aCd-bC-dD3" id="c7F-xP-YgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqP-45-8No" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="3399"/>
+        </scene>
+        <!--編集-->
+        <scene sceneID="PSY-P8-A1F">
+            <objects>
+                <viewController storyboardIdentifier="EditDogProfileViewController" id="s1j-mH-gW9" customClass="EditDogProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tM6-8k-EJm"/>
+                        <viewControllerLayoutGuide type="bottom" id="FQc-1f-MHd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XFP-zb-nRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Pp-53-FWX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FQc-1f-MHd" firstAttribute="top" secondItem="8Pp-53-FWX" secondAttribute="bottom" constant="-50" id="8kk-8T-llb"/>
+                            <constraint firstItem="8Pp-53-FWX" firstAttribute="top" secondItem="XFP-zb-nRb" secondAttribute="top" id="Agv-gC-Z6C"/>
+                            <constraint firstItem="8Pp-53-FWX" firstAttribute="leading" secondItem="XFP-zb-nRb" secondAttribute="leading" id="OYn-d4-iOE"/>
+                            <constraint firstAttribute="trailing" secondItem="8Pp-53-FWX" secondAttribute="trailing" id="lpg-Aq-KGh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="編集" id="aGV-7B-Z5Y">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="WqQ-kd-MIG">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBtn" destination="WqQ-kd-MIG" id="ZRU-b5-14d"/>
+                        <outlet property="tableView" destination="8Pp-53-FWX" id="8W5-px-GMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NV-a3-BhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="5694.6026986506749"/>
+        </scene>
+        <!--編集-->
+        <scene sceneID="00I-xZ-ecL">
+            <objects>
+                <viewController storyboardIdentifier="EditUserProfileViewController" id="mxs-nY-Krc" customClass="EditUserProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bM5-9W-qTB"/>
+                        <viewControllerLayoutGuide type="bottom" id="OGE-On-5q2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2xP-lt-hzS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Gj-94-NJE">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OGE-On-5q2" firstAttribute="top" secondItem="0Gj-94-NJE" secondAttribute="bottom" constant="-50" id="AOy-GX-HaV"/>
+                            <constraint firstAttribute="trailing" secondItem="0Gj-94-NJE" secondAttribute="trailing" id="PaZ-TX-OMC"/>
+                            <constraint firstItem="0Gj-94-NJE" firstAttribute="leading" secondItem="2xP-lt-hzS" secondAttribute="leading" id="bS5-hy-aAl"/>
+                            <constraint firstItem="0Gj-94-NJE" firstAttribute="top" secondItem="2xP-lt-hzS" secondAttribute="top" id="qvP-wc-Z1A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="編集" id="pBJ-tJ-VKe">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Ot2-lp-hep">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBtn" destination="Ot2-lp-hep" id="5x9-T2-Cfm"/>
+                        <outlet property="tableView" destination="0Gj-94-NJE" id="4Wd-aE-389"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seV-6R-2Rp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="4211.2443778110946"/>
+        </scene>
+        <!--プロフィール-->
+        <scene sceneID="Dtp-yf-3HP">
+            <objects>
+                <viewController storyboardIdentifier="UserProfileViewController" id="Dh8-Uv-v2a" customClass="UserProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MGy-Gh-nND"/>
+                        <viewControllerLayoutGuide type="bottom" id="NdY-uF-2cZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fns-jq-dsv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mnx-Eg-cyq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mnx-Eg-cyq" firstAttribute="leading" secondItem="Fns-jq-dsv" secondAttribute="leading" id="BeU-IK-hca"/>
+                            <constraint firstItem="NdY-uF-2cZ" firstAttribute="top" secondItem="mnx-Eg-cyq" secondAttribute="bottom" constant="-50" id="C9k-sM-KaM"/>
+                            <constraint firstItem="mnx-Eg-cyq" firstAttribute="top" secondItem="Fns-jq-dsv" secondAttribute="top" id="Jjp-3R-Ofc"/>
+                            <constraint firstAttribute="trailing" secondItem="mnx-Eg-cyq" secondAttribute="trailing" id="uEY-cm-QAV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="プロフィール" id="T8c-b0-U1e">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="b5K-kI-htZ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="Lew-TR-qol">
+                            <color key="tintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeBtn" destination="b5K-kI-htZ" id="h4B-4b-S9m"/>
+                        <outlet property="editBtn" destination="Lew-TR-qol" id="d9k-Ub-ZK1"/>
+                        <outlet property="tableView" destination="mnx-Eg-cyq" id="Ruu-rU-Zd7"/>
+                        <segue destination="mxs-nY-Krc" kind="show" identifier="fromUserProfileToEdit" id="ReA-XL-0Ue">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUe-Xt-oHE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725.60000000000002" y="4211.2443778110946"/>
+        </scene>
+        <!--愛犬プロフィール-->
+        <scene sceneID="LAD-Gl-ldu">
+            <objects>
+                <viewController storyboardIdentifier="DogProfileViewController" id="lYR-WL-LlQ" customClass="DogProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J7R-10-S6K"/>
+                        <viewControllerLayoutGuide type="bottom" id="xjH-de-nnx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UVO-1G-hVh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AAf-qw-OzU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="717"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AAf-qw-OzU" secondAttribute="trailing" id="SeD-ms-PEa"/>
+                            <constraint firstItem="AAf-qw-OzU" firstAttribute="leading" secondItem="UVO-1G-hVh" secondAttribute="leading" id="VMV-RO-Dq9"/>
+                            <constraint firstItem="xjH-de-nnx" firstAttribute="top" secondItem="AAf-qw-OzU" secondAttribute="bottom" constant="-50" id="pys-Mh-FxX"/>
+                            <constraint firstItem="AAf-qw-OzU" firstAttribute="top" secondItem="UVO-1G-hVh" secondAttribute="top" id="uHg-yn-2JT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="愛犬プロフィール" id="owH-5Q-Ggq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="AW4-2h-Eja">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="新規追加" id="tzk-I6-434">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addBtn" destination="tzk-I6-434" id="Q9v-OP-dYR"/>
+                        <outlet property="closeBtn" destination="AW4-2h-Eja" id="CCb-Lc-UzO"/>
+                        <outlet property="tableView" destination="AAf-qw-OzU" id="U1w-GM-SeN"/>
+                        <segue destination="s1j-mH-gW9" kind="show" identifier="fromDogProfileToEdit" id="dIF-bV-xef">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="msY-Ez-pAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="5694.6026986506749"/>
+        </scene>
+        <!--編集-->
+        <scene sceneID="OrX-tz-1us">
+            <objects>
+                <viewController storyboardIdentifier="EditSitterProfileViewController" id="Upk-n6-sgG" customClass="EditSitterProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xmm-Ru-Q4h"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5Q-2w-FgJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iTW-G5-u1b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Qe-a1-2a6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Qe-a1-2a6" secondAttribute="trailing" id="6Pt-aD-nTD"/>
+                            <constraint firstItem="6Qe-a1-2a6" firstAttribute="leading" secondItem="iTW-G5-u1b" secondAttribute="leading" id="VTE-dD-yrf"/>
+                            <constraint firstItem="6Qe-a1-2a6" firstAttribute="top" secondItem="iTW-G5-u1b" secondAttribute="top" id="bzn-2g-ySn"/>
+                            <constraint firstItem="b5Q-2w-FgJ" firstAttribute="top" secondItem="6Qe-a1-2a6" secondAttribute="bottom" id="wLD-eD-DTl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="編集" id="sKw-th-xKN">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="4cp-Ku-J5s">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveBtn" destination="4cp-Ku-J5s" id="McN-v1-9aa"/>
+                        <outlet property="tableView" destination="6Qe-a1-2a6" id="Qjc-8T-3VO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="an3-5Z-TJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="4962.3688155922046"/>
+        </scene>
+        <!--ホストプロフィール-->
+        <scene sceneID="Dr3-Wp-Sao">
+            <objects>
+                <viewController storyboardIdentifier="MySitterProfileViewController" id="y9N-p2-ej5" customClass="MySitterProfileViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rjn-Fi-T2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="CL3-Y6-IcY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C1q-PN-Wmu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NeE-ib-c4A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NeE-ib-c4A" firstAttribute="top" secondItem="C1q-PN-Wmu" secondAttribute="top" id="HuL-B6-ruM"/>
+                            <constraint firstAttribute="trailing" secondItem="NeE-ib-c4A" secondAttribute="trailing" id="Q1U-Wd-J83"/>
+                            <constraint firstItem="CL3-Y6-IcY" firstAttribute="top" secondItem="NeE-ib-c4A" secondAttribute="bottom" id="fqn-3G-W2A"/>
+                            <constraint firstItem="NeE-ib-c4A" firstAttribute="leading" secondItem="C1q-PN-Wmu" secondAttribute="leading" id="h9p-Kt-153"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ホストプロフィール" id="OAY-qD-RID">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="WhA-aY-XAk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="編集" id="nO0-Es-20s">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeBtn" destination="WhA-aY-XAk" id="sso-7u-1TY"/>
+                        <outlet property="editBtn" destination="nO0-Es-20s" id="icg-t5-LNU"/>
+                        <outlet property="tableView" destination="NeE-ib-c4A" id="Jet-PQ-DvG"/>
+                        <segue destination="Upk-n6-sgG" kind="show" identifier="fromSitterProfileToEdit" id="u9y-az-xeF">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddp-0I-dva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="4963.2683658170918"/>
+        </scene>
+        <!--その他-->
+        <scene sceneID="xbE-Ml-ANY">
+            <objects>
+                <navigationController storyboardIdentifier="UserProfileNavigationController" id="VHY-Pb-HGF" customClass="UserProfileNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="その他" image="ic_tab_others" selectedImage="ic_tab_others_active" id="eXS-xQ-VnK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8eP-gq-Ebk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Dh8-Uv-v2a" kind="relationship" relationship="rootViewController" id="8lS-GY-wEs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0x3-6s-Nfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="4211"/>
+        </scene>
+        <!--その他-->
+        <scene sceneID="jdT-lJ-4Yp">
+            <objects>
+                <navigationController storyboardIdentifier="MySitterProfileNavigationController" id="Nru-p6-k2u" customClass="MySitterProfileNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="その他" image="ic_tab_others" selectedImage="ic_tab_others_active" id="yBP-pM-c1h"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LHg-JO-h06">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="y9N-p2-ej5" kind="relationship" relationship="rootViewController" id="cIf-Xh-Pgw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2q-Nx-ZyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="4963"/>
+        </scene>
+        <!--その他-->
+        <scene sceneID="9j1-Nj-TXs">
+            <objects>
+                <navigationController storyboardIdentifier="DogProfileNavigationController" id="tnm-5O-ErF" customClass="DogProfileNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="その他" image="ic_tab_others" selectedImage="ic_tab_others_active" id="Ind-4D-4Hn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQo-dU-zQR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="lYR-WL-LlQ" kind="relationship" relationship="rootViewController" id="Q5v-hz-1bd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smd-9K-qWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271" y="5695"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_tab_others" width="30" height="30"/>
+        <image name="ic_tab_others_active" width="30" height="30"/>
+    </resources>
+</document>

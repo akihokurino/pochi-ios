@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.001344">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.000947">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cocoapods" time="12.901055">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gym" time="660.444142">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: git log -n 1 --format=%H" time="0.018182">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: /Users/akiho/Applications/ios/pochi-ios/Pods/Crashlytics/submit 835ee8576fac1a92bc478f741200df53fce27208 d3e554fd156b4ad05311f9a53b3450defedae121a6766bf72f63d7713a834ec7 -emails aki030402@gmail.com,mscmry21@gmail.com,takashi.nakagawa@wanpaku.dog,yajiji9@gmail.com,yusuke.hata.dev@gmail.com,a15.eh4c@g.chuo-u.ac.jp,goodislandfield@gmail.com,3a3k.web@gmail.com notifications YES -ipaPath /Users/akiho/Applications/ios/pochi-ios/pochi.ipa" time="67.857296">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: slack" time="1.139647">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

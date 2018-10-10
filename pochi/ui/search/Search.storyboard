@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--郵便番号を入力-->
+        <scene sceneID="YS7-dl-KJH">
+            <objects>
+                <viewController id="ZNK-bv-8DQ" customClass="InputPostalCodeViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P4j-RY-bxW"/>
+                        <viewControllerLayoutGuide type="bottom" id="tDl-Ug-tgH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="J9f-DU-1Du">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="acR-DK-m3d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="acR-DK-m3d" firstAttribute="leading" secondItem="J9f-DU-1Du" secondAttribute="leading" id="7Ae-hf-Rxh"/>
+                            <constraint firstAttribute="trailing" secondItem="acR-DK-m3d" secondAttribute="trailing" id="X3E-AJ-gjZ"/>
+                            <constraint firstItem="tDl-Ug-tgH" firstAttribute="top" secondItem="acR-DK-m3d" secondAttribute="bottom" id="az5-Xf-trj"/>
+                            <constraint firstItem="acR-DK-m3d" firstAttribute="top" secondItem="J9f-DU-1Du" secondAttribute="top" id="nJu-sM-Y2w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="郵便番号を入力" id="EsS-2F-i68"/>
+                    <connections>
+                        <outlet property="tableView" destination="acR-DK-m3d" id="5uG-bc-49J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLO-ny-rMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3621.5999999999999" y="1285.9070464767617"/>
+        </scene>
+        <!--Sitter Detail View Controller-->
+        <scene sceneID="QmL-AW-qi4">
+            <objects>
+                <viewController id="PuX-uz-j1b" customClass="SitterDetailViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jws-ay-dbD"/>
+                        <viewControllerLayoutGuide type="bottom" id="53l-GJ-O2g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZlO-sV-3A9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QTq-Lf-rQq">
+                                <rect key="frame" x="0.0" y="-64" width="375" height="731"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QTq-Lf-rQq" secondAttribute="trailing" id="Dnl-T7-Gpi"/>
+                            <constraint firstItem="QTq-Lf-rQq" firstAttribute="top" secondItem="ZlO-sV-3A9" secondAttribute="top" constant="-64" id="FHN-cT-IaD"/>
+                            <constraint firstItem="53l-GJ-O2g" firstAttribute="top" secondItem="QTq-Lf-rQq" secondAttribute="bottom" id="fzl-IW-Aty"/>
+                            <constraint firstItem="QTq-Lf-rQq" firstAttribute="leading" secondItem="ZlO-sV-3A9" secondAttribute="leading" id="yAq-pJ-iqD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gNY-HX-0vd"/>
+                    <connections>
+                        <outlet property="tableView" destination="QTq-Lf-rQq" id="C1Y-2C-Tlv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8w3-l1-Vhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3622" y="547"/>
+        </scene>
+        <!--ホストを探す-->
+        <scene sceneID="ZvA-Mz-MdT">
+            <objects>
+                <navigationController storyboardIdentifier="SearchNavigationController" id="woL-Qv-ece" customClass="SearchNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ホストを探す" image="ic_tab_search" selectedImage="ic_tab_search_active" id="utd-hR-NLa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Of7-Xi-GkM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8Zi-4V-0MB" kind="relationship" relationship="rootViewController" id="nwo-as-Tke"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZO-7u-pZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="1286"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="uPW-AK-PKB">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="8Zi-4V-0MB" userLabel="Search View Controller" customClass="SearchViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ecP-Jt-bTb"/>
+                        <viewControllerLayoutGuide type="bottom" id="YKC-Qo-Lnb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ogE-ZG-gMd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ieg-h3-4uN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ieg-h3-4uN" firstAttribute="top" secondItem="ogE-ZG-gMd" secondAttribute="top" id="Fe5-Hz-VEc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ieg-h3-4uN" secondAttribute="trailing" id="Ja4-8p-0rc"/>
+                            <constraint firstItem="Ieg-h3-4uN" firstAttribute="leading" secondItem="ogE-ZG-gMd" secondAttribute="leading" id="evS-Sb-4UU"/>
+                            <constraint firstItem="YKC-Qo-Lnb" firstAttribute="top" secondItem="Ieg-h3-4uN" secondAttribute="bottom" id="y5w-Dn-5Io"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="探す" id="1eO-IR-Ksf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="oky-8T-gy3">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationBar" destination="1eO-IR-Ksf" id="qy3-T0-Pqu"/>
+                        <outlet property="searchBtn" destination="oky-8T-gy3" id="KmM-fm-kNx"/>
+                        <outlet property="tableView" destination="Ieg-h3-4uN" id="bpN-AO-2tQ"/>
+                        <segue destination="bOP-a4-q8F" kind="show" identifier="fromSearchToResult" id="ItR-Rt-7hu">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="PuX-uz-j1b" kind="show" identifier="fromSearchToSitterDetail" id="e8o-t9-FuV">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rHj-Sq-puA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="1285.9070464767617"/>
+        </scene>
+        <!--検索結果-->
+        <scene sceneID="uwo-FI-uux">
+            <objects>
+                <viewController id="bOP-a4-q8F" customClass="SearchResultViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bri-Yz-KTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="uwL-Ym-LAG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7su-mF-HfG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-6u-4Xk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uwL-Ym-LAG" firstAttribute="top" secondItem="0ca-6u-4Xk" secondAttribute="bottom" id="fFK-Vd-8LW"/>
+                            <constraint firstAttribute="trailing" secondItem="0ca-6u-4Xk" secondAttribute="trailing" id="knl-WH-HbQ"/>
+                            <constraint firstItem="0ca-6u-4Xk" firstAttribute="top" secondItem="7su-mF-HfG" secondAttribute="top" id="mpZ-JR-sik"/>
+                            <constraint firstItem="0ca-6u-4Xk" firstAttribute="leading" secondItem="7su-mF-HfG" secondAttribute="leading" id="zmZ-wP-P7A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="検索結果" id="Kly-qY-Idy">
+                        <barButtonItem key="rightBarButtonItem" title="変更" id="cnV-4U-UFP">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="changeDateBtn" destination="cnV-4U-UFP" id="zRS-mH-hV9"/>
+                        <outlet property="navigationTitleItem" destination="Kly-qY-Idy" id="Fs3-QA-hyQ"/>
+                        <outlet property="tableView" destination="0ca-6u-4Xk" id="ex2-10-gk6"/>
+                        <segue destination="PuX-uz-j1b" kind="show" identifier="fromSearchResultToSitterDetail" id="K6R-F0-mWB">
+                            <nil key="action"/>
+                        </segue>
+                        <segue destination="ZNK-bv-8DQ" kind="show" identifier="fromSearchResultToInputPostalCode" id="08e-YM-SDT">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38X-xb-K0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2589.5999999999999" y="1285.9070464767617"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_tab_search" width="25" height="25"/>
+        <image name="ic_tab_search_active" width="25" height="25"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="K6R-F0-mWB"/>
+    </inferredMetricsTieBreakers>
+</document>

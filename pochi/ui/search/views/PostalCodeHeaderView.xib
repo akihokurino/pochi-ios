@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostalCodeHeaderView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostalCodeHeaderView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="郵便番号：154-0001" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-4o-5mI">
+                    <rect key="frame" x="16" y="19" width="125" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wlN-NS-yC7">
+                    <rect key="frame" x="329" y="13" width="30" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="変更">
+                        <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" restorationIdentifier="PostalCodeHeaderView" translatesAutoresizingMaskIntoConstraints="NO" id="w0q-Ua-1XH">
+                    <rect key="frame" x="0.0" y="53" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="VPc-h4-qJs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wlN-NS-yC7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AVK-VA-Z4m"/>
+                <constraint firstItem="iz9-4o-5mI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NMD-kU-FUt"/>
+                <constraint firstItem="iz9-4o-5mI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="XM9-vb-ktl"/>
+                <constraint firstAttribute="trailing" secondItem="wlN-NS-yC7" secondAttribute="trailing" constant="16" id="YaB-N5-2TI"/>
+                <constraint firstAttribute="trailing" secondItem="w0q-Ua-1XH" secondAttribute="trailing" id="eWw-qk-FjD"/>
+                <constraint firstItem="w0q-Ua-1XH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ggW-Ln-Wqb"/>
+                <constraint firstAttribute="bottom" secondItem="w0q-Ua-1XH" secondAttribute="bottom" id="wNf-jZ-E8O"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="changeBtn" destination="wlN-NS-yC7" id="Pl2-2b-CEI"/>
+                <outlet property="postalCodeLabel" destination="iz9-4o-5mI" id="Yd7-WJ-wBy"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="78"/>
+        </view>
+    </objects>
+</document>

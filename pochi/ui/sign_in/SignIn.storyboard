@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign In Navigation Controller-->
+        <scene sceneID="p0F-cy-evx">
+            <objects>
+                <navigationController storyboardIdentifier="SignInNavigationController" id="uMN-h1-m8Z" customClass="SignInNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EuX-Yv-hTw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RPh-RO-PFR" kind="relationship" relationship="rootViewController" id="E46-Ob-1kK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwP-v3-nKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="-323"/>
+        </scene>
+        <!--ログイン-->
+        <scene sceneID="Jmt-7d-Y5H">
+            <objects>
+                <viewController id="RPh-RO-PFR" customClass="SignInViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJg-s0-kgg"/>
+                        <viewControllerLayoutGuide type="bottom" id="P1q-2R-jIi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D7X-x1-x7k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="73c-oY-fdi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P1q-2R-jIi" firstAttribute="top" secondItem="73c-oY-fdi" secondAttribute="bottom" id="BgW-7Z-Z2O"/>
+                            <constraint firstItem="73c-oY-fdi" firstAttribute="top" secondItem="D7X-x1-x7k" secondAttribute="top" id="TfQ-fk-h6I"/>
+                            <constraint firstAttribute="trailing" secondItem="73c-oY-fdi" secondAttribute="trailing" id="aZc-BW-RAV"/>
+                            <constraint firstItem="73c-oY-fdi" firstAttribute="leading" secondItem="D7X-x1-x7k" secondAttribute="leading" id="goi-ZF-Esr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="dxb-jG-C2o">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="1vM-6W-I3Y">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBtn" destination="1vM-6W-I3Y" id="Oq1-xo-zms"/>
+                        <outlet property="tableView" destination="73c-oY-fdi" id="1KZ-iw-HUN"/>
+                        <segue destination="cUm-dr-5vc" kind="show" identifier="fromSignInToResetPassword" id="ppT-WV-7e3">
+                            <nil key="action"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJS-JX-DJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="577" y="-323"/>
+        </scene>
+        <!--パスワードを再発行-->
+        <scene sceneID="cSX-5f-SGQ">
+            <objects>
+                <viewController id="cUm-dr-5vc" customClass="ResetPasswordViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wB3-nF-bSC"/>
+                        <viewControllerLayoutGuide type="bottom" id="g26-Qz-jGd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MvG-cw-Y0F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bmq-jJ-vGF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Bmq-jJ-vGF" secondAttribute="trailing" id="8Eu-iL-Wd1"/>
+                            <constraint firstItem="Bmq-jJ-vGF" firstAttribute="leading" secondItem="MvG-cw-Y0F" secondAttribute="leading" id="LhX-D6-m9n"/>
+                            <constraint firstItem="g26-Qz-jGd" firstAttribute="top" secondItem="Bmq-jJ-vGF" secondAttribute="bottom" id="fn9-rR-PwI"/>
+                            <constraint firstItem="Bmq-jJ-vGF" firstAttribute="top" secondItem="MvG-cw-Y0F" secondAttribute="top" id="iIb-vr-1ed"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="パスワードを再発行" id="31B-mx-Nx9"/>
+                    <connections>
+                        <outlet property="tableView" destination="Bmq-jJ-vGF" id="MEL-V4-C04"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brw-1K-5Bm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1476" y="-323.38830584707648"/>
+        </scene>
+    </scenes>
+</document>

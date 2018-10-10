@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TagView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="TagView" id="iN0-l3-epB" customClass="TagView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tag_sample" translatesAutoresizingMaskIntoConstraints="NO" id="WAg-BW-etc">
+                    <rect key="frame" x="30" y="15" width="60" height="54"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="54" id="6ij-39-t9F"/>
+                        <constraint firstAttribute="width" constant="60" id="ZBV-Lx-Kef"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中型犬：OK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39n-ao-y6z">
+                    <rect key="frame" x="8" y="70" width="104" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-iM-nA4">
+                    <rect key="frame" x="119" y="0.0" width="1" height="100"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="xTO-YL-oUT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="39n-ao-y6z" firstAttribute="top" secondItem="WAg-BW-etc" secondAttribute="bottom" constant="1" id="5cU-LM-na0"/>
+                <constraint firstAttribute="trailing" secondItem="39n-ao-y6z" secondAttribute="trailing" constant="8" id="Xj6-f1-G6m"/>
+                <constraint firstAttribute="trailing" secondItem="x4J-iM-nA4" secondAttribute="trailing" id="dsH-l4-hME"/>
+                <constraint firstItem="x4J-iM-nA4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eUZ-AU-Fyc"/>
+                <constraint firstItem="WAg-BW-etc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fi0-PF-GWx"/>
+                <constraint firstAttribute="bottom" secondItem="x4J-iM-nA4" secondAttribute="bottom" id="mO0-zM-SyV"/>
+                <constraint firstItem="39n-ao-y6z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="uqc-TN-Bms"/>
+                <constraint firstItem="WAg-BW-etc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="wjs-OR-dvp"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconView" destination="WAg-BW-etc" id="K0G-xB-qvK"/>
+                <outlet property="nameLabel" destination="39n-ao-y6z" id="kpm-kw-j8N"/>
+                <outlet property="rightBorderView" destination="x4J-iM-nA4" id="N4B-Qi-V7z"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="60"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tag_sample" width="60" height="54"/>
+    </resources>
+</document>

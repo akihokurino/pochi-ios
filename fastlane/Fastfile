@@ -1,0 +1,103 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.55.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    cocoapods
+    # carthage
+  end
+
+  desc "Submit a new Beta Build to Fabric Beta"
+  desc "This will also make sure the profile is up to date"
+  lane :beta do
+    # Fabric generated this lane for deployment to Crashlytics Beta
+    # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
+    gym(scheme: "pochi", configuration: "Debug", export_method: "ad-hoc")
+
+    emails = [
+      'aki030402@gmail.com',
+      'mscmry21@gmail.com',
+      'takashi.nakagawa@wanpaku.dog',
+      'yajiji9@gmail.com',
+      'yusuke.hata.dev@gmail.com',
+      'a15.eh4c@g.chuo-u.ac.jp',
+      'goodislandfield@gmail.com',
+      '3a3k.web@gmail.com'
+    ] # You can list more emails here
+    # groups = ['pochi-ios'] # You can define groups on the web and reference them here
+    #
+    # commit_id = sh("git log -n 1 --format=%H")
+
+    # crashlytics(api_token: '835ee8576fac1a92bc478f741200df53fce27208',
+    #          build_secret: 'd3e554fd156b4ad05311f9a53b3450defedae121a6766bf72f63d7713a834ec7',
+    #      crashlytics_path: './Pods/Crashlytics/Crashlytics.framework',
+    #                emails: emails,
+    #                groups: groups,
+    #                 notes: 'commit id: ' + commit_id, # Check out the changelog_from_git_commits action
+    #         notifications: true) # Should this distribution notify your testers via email?
+
+    submitPath = "#{File.expand_path("..", Dir.pwd)}/Pods/Crashlytics/submit"
+    commit_id = sh("git log -n 1 --format=%H")
+    token = "835ee8576fac1a92bc478f741200df53fce27208"
+    secret = "d3e554fd156b4ad05311f9a53b3450defedae121a6766bf72f63d7713a834ec7"
+    ipaPath = "#{File.expand_path("..", Dir.pwd)}/pochi.ipa"
+    sh "#{submitPath} #{token} #{secret} -emails #{emails.join(",")} notifications YES -ipaPath #{ipaPath}"
+
+    # for all available options run `fastlane action crashlytics`
+
+    # You can notify your team in chat that a beta build has been uploaded
+    slack(
+       slack_url: "https://hooks.slack.com/services/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",
+       channel: "app-beta",
+       message: "Betaに新しいバージョンを配布しました！ - https://apps-ios.crashlytics.com/projects/59181452cdcdc5664bcce77b"
+    )
+  end
+
+  desc "Deploy a new version to the App Store"
+  lane :release do
+    # match(type: "appstore")
+    # snapshot
+    gym(scheme: "pochi") # Build your app - more options available
+    deliver(force: true)
+    # frameit
+  end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used. No personal data is recorded.
+# Learn more at https://github.com/fastlane/fastlane#metrics

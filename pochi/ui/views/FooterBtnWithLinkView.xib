@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterBtnWithLinkView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="FooterBtnWithLinkView" id="iN0-l3-epB" customClass="FooterBtnWithLinkView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwT-14-7i4">
+                    <rect key="frame" x="24" y="24" width="327" height="48"/>
+                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="aYd-lm-Fuo"/>
+                    </constraints>
+                    <state key="normal" title="ログイン">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGr-vp-vOp">
+                    <rect key="frame" x="24" y="102" width="327" height="30"/>
+                    <state key="normal" title="パスワードを忘れた場合はこちら">
+                        <color key="titleColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="zwT-14-7i4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="Js5-Wx-yN0"/>
+                <constraint firstAttribute="trailing" secondItem="nGr-vp-vOp" secondAttribute="trailing" constant="24" id="P6W-4e-nWu"/>
+                <constraint firstItem="nGr-vp-vOp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="WRs-fQ-nIE"/>
+                <constraint firstAttribute="bottom" secondItem="nGr-vp-vOp" secondAttribute="bottom" constant="20" id="faY-qn-Vyd"/>
+                <constraint firstItem="nGr-vp-vOp" firstAttribute="top" secondItem="zwT-14-7i4" secondAttribute="bottom" constant="30" id="fht-w3-k5Q"/>
+                <constraint firstAttribute="trailing" secondItem="zwT-14-7i4" secondAttribute="trailing" constant="24" id="kSt-X0-KCi"/>
+                <constraint firstItem="zwT-14-7i4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="xjz-fW-Bnd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btn" destination="zwT-14-7i4" id="gy7-OW-4Ml"/>
+                <outlet property="linkBtn" destination="nGr-vp-vOp" id="CTa-WK-Aai"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="-109"/>
+        </view>
+    </objects>
+</document>

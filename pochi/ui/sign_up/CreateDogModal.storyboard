@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Dog Modal View Controller-->
+        <scene sceneID="7UL-eW-3D9">
+            <objects>
+                <viewController storyboardIdentifier="CreateDogModalViewController" id="fqI-K6-Lya" customClass="CreateDogModalViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dEh-02-AvP"/>
+                        <viewControllerLayoutGuide type="bottom" id="b6k-uB-6Qh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hAY-x8-puh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-5b-HFN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="aKJ-HB-pDY"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="愛犬を登録" id="kY6-My-Cgp">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="egi-y0-43e">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kv1-SE-cQR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kv1-SE-cQR" firstAttribute="top" secondItem="K1B-5b-HFN" secondAttribute="bottom" id="CLT-Vz-Bj7"/>
+                            <constraint firstItem="kv1-SE-cQR" firstAttribute="leading" secondItem="hAY-x8-puh" secondAttribute="leading" id="GXi-m1-zRt"/>
+                            <constraint firstItem="b6k-uB-6Qh" firstAttribute="top" secondItem="kv1-SE-cQR" secondAttribute="bottom" id="LuL-kY-V5g"/>
+                            <constraint firstAttribute="trailing" secondItem="kv1-SE-cQR" secondAttribute="trailing" id="TP2-oq-G2B"/>
+                            <constraint firstItem="K1B-5b-HFN" firstAttribute="top" secondItem="hAY-x8-puh" secondAttribute="top" id="gV2-rQ-yYQ"/>
+                            <constraint firstAttribute="trailing" secondItem="K1B-5b-HFN" secondAttribute="trailing" id="k13-di-dvc"/>
+                            <constraint firstItem="K1B-5b-HFN" firstAttribute="leading" secondItem="hAY-x8-puh" secondAttribute="leading" id="p57-F4-bbT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="egi-y0-43e" id="3O7-dX-E4K"/>
+                        <outlet property="tableView" destination="kv1-SE-cQR" id="Afn-Q2-USG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWa-TX-WRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1242.4000000000001" y="-1079.0104947526238"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--預かる-->
+        <scene sceneID="KwG-9f-rOo">
+            <objects>
+                <navigationController storyboardIdentifier="KeepBookingNavigationController" id="gob-aT-TaT" customClass="KeepBookingNavigationController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="預かる" image="ic_tab_keep" selectedImage="ic_tab_keep_active" id="xUe-hW-MnQ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KEB-jj-oZw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EEr-3s-AFD" kind="relationship" relationship="rootViewController" id="gBs-8P-291"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pL-5b-DpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="2773"/>
+        </scene>
+        <!--Keep Booking List View Controller-->
+        <scene sceneID="xLm-F6-Cai">
+            <objects>
+                <viewController storyboardIdentifier="KeepBookingListViewController" id="EEr-3s-AFD" customClass="KeepBookingListViewController" customModule="pochi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yQV-VO-QaM"/>
+                        <viewControllerLayoutGuide type="bottom" id="hhm-AI-ek6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="daN-Ve-lKJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yEh-bJ-UWM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yEh-bJ-UWM" firstAttribute="leading" secondItem="daN-Ve-lKJ" secondAttribute="leading" id="e65-iI-hf4"/>
+                            <constraint firstItem="yEh-bJ-UWM" firstAttribute="top" secondItem="daN-Ve-lKJ" secondAttribute="top" id="h48-xk-Exs"/>
+                            <constraint firstItem="hhm-AI-ek6" firstAttribute="top" secondItem="yEh-bJ-UWM" secondAttribute="bottom" id="hrp-13-Em0"/>
+                            <constraint firstAttribute="trailing" secondItem="yEh-bJ-UWM" secondAttribute="trailing" id="qch-Hh-xG6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="72t-dg-5vQ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="M8t-kk-NkX">
+                            <rect key="frame" x="45.5" y="7" width="284" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="承認前"/>
+                                <segment title="確定済"/>
+                                <segment title="受け入れ中"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="M8t-kk-NkX" id="eFz-Jk-cOe"/>
+                        <outlet property="tableView" destination="yEh-bJ-UWM" id="fAC-z0-tAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4T-sj-o4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1589.5999999999999" y="2772.8635682158924"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_tab_keep" width="30" height="30"/>
+        <image name="ic_tab_keep_active" width="30" height="30"/>
+    </resources>
+</document>

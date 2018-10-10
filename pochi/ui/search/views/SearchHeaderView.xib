@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchHeaderView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SearchHeaderView" id="iN0-l3-epB" customClass="SearchHeaderView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="591" height="195"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="探す" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgd-Ng-PH5">
+                    <rect key="frame" x="16" y="33" width="559" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="5ZC-zb-lvg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3T-9R-Ymw">
+                    <rect key="frame" x="20" y="127" width="551" height="48"/>
+                    <color key="backgroundColor" red="1" green="0.47450980390000003" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="WJR-60-cgH"/>
+                    </constraints>
+                    <state key="normal" title="検索する">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="郵便番号を入力（例：1510001）" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-9h-lmD">
+                    <rect key="frame" x="20" y="69" width="551" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="mtQ-OR-wDz"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.99215686270000003" green="0.67450980390000004" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="o3T-9R-Ymw" firstAttribute="top" secondItem="5Gg-9h-lmD" secondAttribute="bottom" constant="10" id="3ht-Fu-TD0"/>
+                <constraint firstAttribute="bottom" secondItem="o3T-9R-Ymw" secondAttribute="bottom" constant="20" id="3wF-ho-YXu"/>
+                <constraint firstItem="5Gg-9h-lmD" firstAttribute="top" secondItem="fgd-Ng-PH5" secondAttribute="bottom" constant="15" id="9kr-5d-SY1"/>
+                <constraint firstItem="5Gg-9h-lmD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="BwC-vx-OXM"/>
+                <constraint firstItem="fgd-Ng-PH5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Thk-oP-hRg"/>
+                <constraint firstItem="o3T-9R-Ymw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ZM0-0Z-9bt"/>
+                <constraint firstAttribute="trailing" secondItem="5Gg-9h-lmD" secondAttribute="trailing" constant="20" id="ovf-OM-orE"/>
+                <constraint firstAttribute="trailing" secondItem="o3T-9R-Ymw" secondAttribute="trailing" constant="20" id="ptE-SA-eW5"/>
+                <constraint firstAttribute="trailing" secondItem="fgd-Ng-PH5" secondAttribute="trailing" constant="16" id="xLa-Ow-8jr"/>
+                <constraint firstItem="fgd-Ng-PH5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="33" id="xTy-sB-TKB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="postalCodeTextField" destination="5Gg-9h-lmD" id="61X-R2-Y3k"/>
+                <outlet property="searchBtn" destination="o3T-9R-Ymw" id="Xf8-LJ-Qlz"/>
+            </connections>
+            <point key="canvasLocation" x="63.5" y="81.5"/>
+        </view>
+    </objects>
+</document>

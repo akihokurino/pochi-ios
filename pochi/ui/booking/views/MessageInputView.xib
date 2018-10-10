@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageInputView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="MessageInputView" id="iN0-l3-epB" customClass="MessageInputView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pBf-UW-YEj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="6ls-eK-HgP"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ6-ou-rxS">
+                    <rect key="frame" x="331" y="10" width="30" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="FpR-ia-N5Q"/>
+                        <constraint firstAttribute="width" constant="30" id="fxK-f5-Ffr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="送信">
+                        <color key="titleColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABD-Ep-zQv">
+                    <rect key="frame" x="4" y="3" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="mW2-2y-Qxh"/>
+                        <constraint firstAttribute="height" constant="40" id="rkh-pN-cyD"/>
+                    </constraints>
+                    <state key="normal" image="ic_camera"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cde-Xf-2uV" customClass="NextGrowingTextView" customModule="NextGrowingTextView">
+                    <rect key="frame" x="52" y="8" width="271" height="33"/>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cde-Xf-2uV" secondAttribute="bottom" constant="7" id="1Sg-Hu-pZH"/>
+                <constraint firstAttribute="trailing" secondItem="jJ6-ou-rxS" secondAttribute="trailing" constant="14" id="5Fd-G2-Frs"/>
+                <constraint firstItem="ABD-Ep-zQv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="5tg-yJ-TN6"/>
+                <constraint firstItem="ABD-Ep-zQv" firstAttribute="top" secondItem="pBf-UW-YEj" secondAttribute="bottom" constant="2" id="80C-bf-wf7"/>
+                <constraint firstItem="pBf-UW-YEj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="82V-PI-Lel"/>
+                <constraint firstAttribute="bottom" secondItem="jJ6-ou-rxS" secondAttribute="bottom" constant="10" id="d1W-3Z-zEB"/>
+                <constraint firstItem="pBf-UW-YEj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ghr-20-yu7"/>
+                <constraint firstItem="Cde-Xf-2uV" firstAttribute="top" secondItem="pBf-UW-YEj" secondAttribute="bottom" constant="7" id="i9s-DE-Gil"/>
+                <constraint firstItem="Cde-Xf-2uV" firstAttribute="leading" secondItem="ABD-Ep-zQv" secondAttribute="trailing" constant="8" id="kFY-oU-BSm"/>
+                <constraint firstAttribute="trailing" secondItem="pBf-UW-YEj" secondAttribute="trailing" id="sri-bT-vde"/>
+                <constraint firstItem="jJ6-ou-rxS" firstAttribute="leading" secondItem="Cde-Xf-2uV" secondAttribute="trailing" constant="8" id="tbr-2p-MDs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cameraBtn" destination="ABD-Ep-zQv" id="uKI-5n-Ttq"/>
+                <outlet property="sendBtn" destination="jJ6-ou-rxS" id="gLp-xb-HJo"/>
+                <outlet property="textView" destination="Cde-Xf-2uV" id="XGl-fF-wlY"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_camera" width="40" height="40"/>
+    </resources>
+</document>

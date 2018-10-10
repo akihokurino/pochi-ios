@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SystemMessageCell" rowHeight="91" id="KGk-i7-Jjw" customClass="SystemMessageCell" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4B-9C-6Ml">
+                        <rect key="frame" x="20" y="16" width="280" height="58.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リクエストが承認されました" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pJ-RP-o62">
+                                <rect key="frame" x="16" y="16" width="248" height="26.5"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6pJ-RP-o62" secondAttribute="bottom" constant="16" id="8Xh-gW-kvy"/>
+                            <constraint firstItem="6pJ-RP-o62" firstAttribute="top" secondItem="B4B-9C-6Ml" secondAttribute="top" constant="16" id="9uU-g6-Nja"/>
+                            <constraint firstItem="6pJ-RP-o62" firstAttribute="leading" secondItem="B4B-9C-6Ml" secondAttribute="leading" constant="16" id="fGX-6b-ORp"/>
+                            <constraint firstAttribute="trailing" secondItem="6pJ-RP-o62" secondAttribute="trailing" constant="16" id="ixA-rJ-LYy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="B4B-9C-6Ml" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="0oE-wM-4Qw"/>
+                    <constraint firstAttribute="trailing" secondItem="B4B-9C-6Ml" secondAttribute="trailing" constant="20" id="PIU-J0-LIy"/>
+                    <constraint firstAttribute="bottom" secondItem="B4B-9C-6Ml" secondAttribute="bottom" constant="16" id="Ufx-r0-r0W"/>
+                    <constraint firstItem="B4B-9C-6Ml" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="vAm-nZ-Yep"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="6pJ-RP-o62" id="GIs-tl-TIh"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="25.5"/>
+        </tableViewCell>
+    </objects>
+</document>

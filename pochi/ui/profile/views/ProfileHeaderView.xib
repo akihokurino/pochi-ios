@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="My Profile Header View" customClass="MyProfileHeaderView" customModule="pochi" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ProfileHeaderView" id="iN0-l3-epB" userLabel="My Profile Header View" customClass="ProfileHeaderView" customModule="pochi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_usericon" translatesAutoresizingMaskIntoConstraints="NO" id="v5T-2S-rNW">
+                    <rect key="frame" x="112" y="24" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Lcd-0m-JiP"/>
+                        <constraint firstAttribute="width" constant="150" id="W7i-pJ-tff"/>
+                        <constraint firstAttribute="height" constant="150" id="hsx-ld-xbZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="75"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ユーザー名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXz-bh-jbu">
+                    <rect key="frame" x="16" y="186" width="343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ニックネーム" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpk-bY-5jx">
+                    <rect key="frame" x="16" y="212" width="343" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="DXz-bh-jbu" firstAttribute="top" secondItem="v5T-2S-rNW" secondAttribute="bottom" constant="12" id="4uK-qK-JpR"/>
+                <constraint firstAttribute="trailing" secondItem="DXz-bh-jbu" secondAttribute="trailing" constant="16" id="KqE-Ux-Eq5"/>
+                <constraint firstItem="Cpk-bY-5jx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NzK-dK-8Rm"/>
+                <constraint firstItem="v5T-2S-rNW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pgd-B1-c1A"/>
+                <constraint firstAttribute="trailing" secondItem="Cpk-bY-5jx" secondAttribute="trailing" constant="16" id="WcM-SW-fOl"/>
+                <constraint firstItem="Cpk-bY-5jx" firstAttribute="top" secondItem="DXz-bh-jbu" secondAttribute="bottom" constant="5" id="ait-z9-awY"/>
+                <constraint firstItem="v5T-2S-rNW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="k71-9v-xM9"/>
+                <constraint firstItem="DXz-bh-jbu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="sbg-KW-v8A"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameLabel" destination="DXz-bh-jbu" id="f1D-ay-qbB"/>
+                <outlet property="nickNameLabel" destination="Cpk-bY-5jx" id="UXo-Lg-ZIW"/>
+                <outlet property="userIconView" destination="v5T-2S-rNW" id="gw4-0I-Ers"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="74.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_default_usericon" width="150" height="150"/>
+    </resources>
+</document>
